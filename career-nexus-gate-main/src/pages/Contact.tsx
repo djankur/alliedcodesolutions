@@ -25,9 +25,7 @@ export default function ContactPage() {
   const [country, setCountry] = useState<'india' | 'usa' | 'uk'>('usa');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [attachment, setAttachment] = useState<File | null>(null);
 
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -81,29 +79,27 @@ export default function ContactPage() {
       formDataToSend.append('subject', formData.subject);
       formDataToSend.append('message', formData.message);
       formDataToSend.append('country_code', countryPhoneRules[country].code);
-      
-      if (attachment) {
-        formDataToSend.append('attachment', attachment);  
-      }
+
+
 
       // Logic: If on localhost, point to live site. If live, point to local file.
-      // REPLACE 'alliedcodesolutions.com' with your actual domain if different.
-      const endpoint = window.location.hostname === 'localhost' 
-        ? 'https://alliedcodesolutions.com/contact.php' 
+      // REPLACE 'syntrionixtechnologies.com' with your actual domain if different.
+      const endpoint = window.location.hostname === 'localhost'
+        ? 'https://syntrionixtechnologies.com/contact.php'
         : '/contact.php';
 
       const res = await fetch(endpoint, {
         method: 'POST',
         body: formDataToSend,
       });
-      
+
       // Handle non-JSON responses (like 404 or 500 errors from PHP)
       if (!res.ok) throw new Error('Network response was not ok');
-      
+
       const result = await res.json();
-      
+
       if (result.status !== 'success') {
-          throw new Error(result.message || 'Server failed to send email');
+        throw new Error(result.message || 'Server failed to send email');
       }
 
       setSubmitted(true);
@@ -117,15 +113,12 @@ export default function ContactPage() {
           subject: '',
           message: '',
         });
-        setAttachment(null);
-        if (fileInputRef.current) {
-            fileInputRef.current.value = '';
-        }
+
       }, 3000);
 
     } catch (err) {
       console.error(err);
-      alert('Failed to send message. Please ensure contact.php is uploaded to your server.');
+      alert('Failed to send message.');
     } finally {
       setIsSubmitting(false);
     }
@@ -168,7 +161,7 @@ export default function ContactPage() {
         <div className="relative z-10 w-full py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              
+
               {/* Left Content */}
               <div className="space-y-8">
                 <div>
@@ -192,7 +185,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-white font-semibold mb-1">Email Us</h3>
-                      <p className="text-gray-400">info@alliedcodesolutions.com</p>
+                      <p className="text-gray-400">info@syntrionixtechnologies.com</p>
                     </div>
                   </div>
 
@@ -202,7 +195,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-white font-semibold mb-1">Call Us</h3>
-                      <p className="text-gray-400">+1 602 99 1445</p> 
+                      <p className="text-gray-400">+1 602 99 1445</p>
                     </div>
                   </div>
 
@@ -223,10 +216,10 @@ export default function ContactPage() {
                 {/* Glow Effects */}
                 <div className="absolute -top-8 -right-8 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-8 -left-8 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl"></div>
-                
+
                 {/* Glass Card */}
                 <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl hover:border-white/30 transition-all duration-300 overflow-hidden">
-                  
+
                   {/* Form Header */}
                   <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-b border-white/10 p-8">
                     <div className="flex items-center gap-3 mb-2">
@@ -240,7 +233,7 @@ export default function ContactPage() {
 
                   {/* Form Fields */}
                   <div className="p-8 space-y-6">
-                    
+
                     {/* Name and Email Row */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
@@ -366,20 +359,7 @@ export default function ContactPage() {
                       )}
                     </div>
 
-                    {/* File Attachment */}
-                    <div className="space-y-2">
-                      <Label htmlFor="attachment" className="text-white text-sm font-medium">
-                        Attachment (PDF / DOC)
-                      </Label>
-                      <Input
-                        id="attachment"
-                        type="file"
-                        ref={fileInputRef}
-                        accept=".pdf,.doc,.docx"
-                        onChange={(e) => setAttachment(e.target.files?.[0] || null)}
-                        className="bg-white/5 border-white/10 text-white h-12 file:bg-white/10 file:border-0 file:rounded-lg file:text-white file:px-4 file:py-2 file:mr-4 file:hover:bg-white/20 file:transition-colors"
-                      />
-                    </div>
+
 
                     {/* Submit Button */}
                     <Button

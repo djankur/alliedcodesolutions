@@ -61,16 +61,16 @@ const About = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-slate-900">
-      {/* <section className="relative min-h-screen flex items-center overflow-hidden bg-slate-900"> */}
+        {/* <section className="relative min-h-screen flex items-center overflow-hidden bg-slate-900"> */}
 
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           {/* <img
             src={heroImage}
-            alt="About AlliedCodeSolutions"
+            alt="About Syntrionix Technologies"
             className="w-full h-full object-cover opacity-40"
           /> */}
-                    {/* Animated Grid Pattern */}
+          {/* Animated Grid Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0" style={{
               backgroundImage: 'linear-gradient(rgba(59, 130, 246, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.5) 1px, transparent 1px)',
@@ -87,27 +87,27 @@ const About = () => {
               <div className="text-white space-y-8">
 
 
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-                  <span className="block text-white">AlliedCode</span>
+                <h1 className="text-5xl sm:text-6xl lg:text-4xl font-bold leading-tight">
+                  <span className="block text-white">Syntrionix</span>
                   <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                    Solutions
+                    Technologies
                   </span>
                 </h1>
 
                 <p className="text-xl text-gray-300 leading-relaxed">
                   A dynamic and technology-driven staffing company connecting exceptional talent with leading organizations across the United States.
-                   AlliedCodeSolutions is built on decades of experience in recruitment,
-                   operations, and digital transformation — creating a bridge between
+                  Syntrionix Technologies is built on decades of experience in recruitment,
+                  operations, and digital transformation — creating a bridge between
                   innovative companies and skilled professionals worldwide.
-                   We believe in people-first partnerships. Every client engagement is an
+                  We believe in people-first partnerships. Every client engagement is an
                   opportunity to understand your business goals and deliver a workforce
                   solution that fits seamlessly into your culture and growth plan.
-                          Our expertise spans IT, engineering, healthcare, finance, marketing, and
-        emerging technologies — powered by a global network of recruiters and
-        industry experts. <strong>We are not just recruiters — we are your growth
-        partners</strong>, helping you scale smarter, faster, and more
-        efficiently.
-                
+                  Our expertise spans IT, engineering, healthcare, finance, marketing, and
+                  emerging technologies — powered by a global network of recruiters and
+                  industry experts. <strong>We are not just recruiters — we are your growth
+                    partners</strong>, helping you scale smarter, faster, and more
+                  efficiently.
+
                 </p>
 
                 <div className="grid grid-cols-2 gap-6 pt-8 border-t border-white/10">
@@ -126,31 +126,31 @@ const About = () => {
                   {/* Decorative Elements */}
                   <div className="absolute -top-4 -right-4 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
                   <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
-                  
+
                   {/* Main Card */}
                   <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:border-white/40 transition-all duration-300">
                     {/* <Globe className="w-16 h-16 text-blue-400 mb-6" /> */}
-              {/* <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-8 shadow-xl border border-gray-100"> */}
-                {/* <Target className="w-12 h-12 text-blue-600 mb-6" /> */}
-                {/* <h3 className="text-2xl font-bold text-gray-50 mb-6">Why AlliedCodeSolutions?</h3> */}
-                <ul className="space-y-5">
-                  {highlights.map((highlight, index) => (
-                    <li key={index} className="flex items-start space-x-4">
-                      <CheckCircle className="w-6 h-6 text-emerald-500 mt-1 flex-shrink-0" />
-                      <span className="text-gray-100 text-lg leading-relaxed">{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-                    <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
-                      {stats.slice(2).map((stat, index) => (
-                        <div key={index}>
-                          <div className="text-2xl font-bold text-cyan-400">{stat.number}</div>
-                          <div className="text-xs text-gray-400">{stat.label}</div>
-                        </div>
+                    {/* <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-8 shadow-xl border border-gray-100"> */}
+                    {/* <Target className="w-12 h-12 text-blue-600 mb-6" /> */}
+                    {/* <h3 className="text-2xl font-bold text-gray-50 mb-6">Why Syntrionix Technologies?</h3> */}
+                    <ul className="space-y-5">
+                      {highlights.map((highlight, index) => (
+                        <li key={index} className="flex items-start space-x-4">
+                          <CheckCircle className="w-6 h-6 text-emerald-500 mt-1 flex-shrink-0" />
+                          <span className="text-gray-100 text-lg leading-relaxed">{highlight}</span>
+                        </li>
                       ))}
-                    </div>
-        
+                    </ul>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
+                    {stats.slice(2).map((stat, index) => (
+                      <div key={index}>
+                        <div className="text-2xl font-bold text-cyan-400">{stat.number}</div>
+                        <div className="text-xs text-gray-400">{stat.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -170,7 +170,7 @@ const About = () => {
 
 
 
-    
+
 
     </div>
   );

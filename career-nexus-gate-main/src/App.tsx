@@ -12,6 +12,8 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import ResumeBuilder from "./pages/ResumeBuilder";
+
 
 const queryClient = new QueryClient();
 
@@ -40,6 +42,7 @@ const App = () => (
                 path="/terms-and-conditions"
                 element={<TermsAndConditions />}
               />
+              <Route path="/resume-builder" element={<ResumeBuilder />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

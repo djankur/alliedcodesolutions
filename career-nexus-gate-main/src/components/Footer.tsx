@@ -16,14 +16,14 @@ export default function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          
+
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-     
+
               <img
                 src="/logo.png"
-                alt="Allied Code Solutions"
+                alt="Syntrionix Technologies"
                 className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
 
@@ -33,8 +33,8 @@ export default function Footer() {
               Connecting exceptional talent with outstanding opportunities. Your trusted partner in professional recruitment and career development.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="https://www.linkedin.com/company/allied-code-solutions/about/" 
+              <a
+                href="https://www.linkedin.com/company/syntrionix-technologies/about/"
                 className="p-2 bg-white/5 hover:bg-white/10 rounded-lg border border-white/10 hover:border-blue-400/50 transition-all duration-300 group"
               >
                 <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
@@ -125,7 +125,7 @@ export default function Footer() {
                 <div className="mt-1 p-2 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors">
                   <Mail className="w-4 h-4 text-blue-400" />
                 </div>
-                <span className="text-gray-400 text-sm group-hover:text-white transition-colors">info@alliedcodesolutions.com
+                <span className="text-gray-400 text-sm group-hover:text-white transition-colors">info@syntrionixtechnologies.com
                 </span>
               </div>
               <div className="flex items-center space-x-3 group">
@@ -133,7 +133,7 @@ export default function Footer() {
                   <Phone className="w-4 h-4 text-cyan-400" />
                 </div>
                 <span className="text-gray-400 text-sm group-hover:text-white transition-colors">
-                 +1 602 99 1445
+                  +1 602 99 1445
                 </span>
               </div>
               <div className="flex items-start space-x-3 group">
@@ -141,7 +141,7 @@ export default function Footer() {
                   <MapPin className="w-4 h-4 text-purple-400" />
                 </div>
                 <span className="text-gray-400 text-sm group-hover:text-white transition-colors">
-                 1839 W Spur Dr, Phoenix, AZ 85085, USA
+                  1839 W Spur Dr, Phoenix, AZ 85085, USA
                 </span>
               </div>
             </div>
@@ -152,19 +152,19 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-500 text-sm">
-              © 2026 AlliedCodeSolutions. All rights reserved.
+              © 2026 Syntrionix Technologies. All rights reserved.
             </p>
             <div className="flex space-x-8">
-              <a 
-                href="/privacy-policy" 
-                onClick={() => window.scrollTo(0, 0)} 
+              <a
+                href="/privacy-policy"
+                onClick={() => window.scrollTo(0, 0)}
                 className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
               >
                 Privacy Policy
               </a>
-              <a 
-                href="/terms-and-conditions" 
-                onClick={() => window.scrollTo(0, 0)} 
+              <a
+                href="/terms-and-conditions"
+                onClick={() => window.scrollTo(0, 0)}
                 className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
               >
                 Terms & Conditions

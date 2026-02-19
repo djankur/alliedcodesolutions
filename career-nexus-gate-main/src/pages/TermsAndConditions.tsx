@@ -7,7 +7,7 @@ const TermsAndConditions = () => {
     {
       icon: <UserCheck className="w-6 h-6" />,
       title: "Acceptance of Terms",
-      content: "By accessing and using AlliedCodeSolutions' services, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions. If you do not agree, please discontinue use of our services immediately.",
+      content: "By accessing and using Syntrionix Technologies' services, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions. If you do not agree, please discontinue use of our services immediately.",
       gradient: "from-blue-500 to-blue-600"
     },
     {
@@ -25,13 +25,13 @@ const TermsAndConditions = () => {
     {
       icon: <AlertCircle className="w-6 h-6" />,
       title: "Limitation of Liability",
-      content: "AlliedCodeSolutions is not liable for any indirect, incidental, consequential, or punitive damages arising from the use or inability to use our services. We do not guarantee employment outcomes or specific placements.",
+      content: "Syntrionix Technologies is not liable for any indirect, incidental, consequential, or punitive damages arising from the use or inability to use our services. We do not guarantee employment outcomes or specific placements.",
       gradient: "from-orange-500 to-orange-600"
     },
     {
       icon: <Scale className="w-6 h-6" />,
       title: "Intellectual Property",
-      content: "All content, trademarks, and materials on our platform are owned by AlliedCodeSolutions. You may not reproduce, distribute, or create derivative works without our explicit written permission.",
+      content: "All content, trademarks, and materials on our platform are owned by Syntrionix Technologies. You may not reproduce, distribute, or create derivative works without our explicit written permission.",
       gradient: "from-cyan-500 to-cyan-600"
     },
     {
@@ -53,7 +53,7 @@ const TermsAndConditions = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-<section className="relative min-h-[60vh] flex items-center overflow-hidden bg-slate-900">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-slate-900">
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -68,19 +68,19 @@ const TermsAndConditions = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Left Side */}
               <div className="text-white space-y-8">
-         
 
-  
+
+
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
                   <span className="block text-white">Terms</span>
                   <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                                       Conditions
+                    Conditions
 
                   </span>
                 </h1>
 
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  These terms govern your use of AlliedCodeSolutions' services. Please read them carefully to understand your rights and obligations when engaging with our platform and recruitment services.
+                  These terms govern your use of Syntrionix Technologies' services. Please read them carefully to understand your rights and obligations when engaging with our platform and recruitment services.
                 </p>
 
                 <div className="pt-4">
@@ -94,7 +94,7 @@ const TermsAndConditions = () => {
                   {/* Decorative Elements */}
                   <div className="absolute -top-4 -right-4 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
                   <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-blued-500/20 rounded-full blur-3xl"></div>
-                  
+
                   {/* Main Card */}
                   <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:border-white/40 transition-all duration-300">
                     <h3 className="text-2xl font-bold text-white mb-6">Our Principles</h3>

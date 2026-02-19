@@ -1,4 +1,4 @@
-// ===== COMPLETE INDEX.TSX - ALLIEDCODESOLUTIONS =====
+// ===== COMPLETE INDEX.TSX - SYNTRIONIX TECHNOLOGIES =====
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -41,7 +41,7 @@ const Index = () => {
       name: "Sarah Johnson",
       role: "VP of Engineering",
       company: "TechVenture Inc",
-      content: "AlliedCodeSolutions helped us scale our engineering team rapidly. Their understanding of our needs and speed of delivery was exceptional.",
+      content: "Syntrionix Technologies helped us scale our engineering team rapidly. Their understanding of our needs and speed of delivery was exceptional.",
       rating: 5
     },
     {
@@ -77,7 +77,7 @@ const Index = () => {
         <div className="relative z-10 w-full py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              
+
               {/* Left: Main Content */}
               <div className="text-white space-y-8">
                 {/* Badge */}
@@ -141,13 +141,13 @@ const Index = () => {
                   {/* Decorative Elements */}
                   <div className="absolute -top-4 -right-4 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
                   <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
-                  
+
                   {/* Main Card */}
                   <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:border-white/40 transition-all duration-300">
                     {/* Company Overview */}
                     <div className="mb-6">
                       <h3 className="text-2xl font-bold text-white mb-4">
-                        AlliedCodeSolutions
+                        Syntrionix Technologies
                       </h3>
                       <p className="text-gray-200 leading-relaxed">
                         A global staffing and workforce solutions company specializing in delivering the right
@@ -162,7 +162,7 @@ const Index = () => {
                       <h4 className="text-sm font-semibold text-blue-300 uppercase tracking-wider mb-4">
                         Our Expertise
                       </h4>
-                      
+
                       <div className="flex items-start gap-3">
                         <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
                           <Users className="w-5 h-5 text-blue-400" />
@@ -217,14 +217,14 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <div className="inline-flex items-center bg-blue-50 px-4 py-2 rounded-full text-blue-700 text-sm font-semibold mb-6">
-              Why Choose AlliedCodeSolutions?
+              Why Choose Syntrionix Technologies?
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Your Growth Partners
               <span className="block text-blue-600">Not Just Recruiters</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We combine deep industry expertise with a strategic mindset to drive measurable results. Scale smarter, faster, and more efficiently with AlliedCodeSolutions.
+              We combine deep industry expertise with a strategic mindset to drive measurable results. Scale smarter, faster, and more efficiently with Syntrionix Technologies.
             </p>
           </div>
 
@@ -236,15 +236,15 @@ const Index = () => {
               >
                 {/* Background Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity duration-500 from-blue-500 to-purple-600"></div>
-                
+
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                   {feature.icon}
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">
                   {feature.title}
                 </h3>
-                
+
                 <p className="text-gray-600 leading-relaxed">
                   {feature.description}
                 </p>
@@ -254,7 +254,7 @@ const Index = () => {
         </div>
       </section>
 
-    {/* Services Preview */}
+      {/* Services Preview */}
       <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -300,65 +300,65 @@ const Index = () => {
               </Link>
             </div>
 
-{/* Right Side - Cards */}
-<div className="relative">
-  <div className="grid grid-cols-2 gap-6">
-    {[
-      {
-        title: "Compliance First",
-        desc: "Full adherence to labor, immigration, and employment regulations.",
-        icon: <Shield className="w-6 h-6 text-white" />,
-        gradient: "from-blue-500 to-blue-600"
-      },
-      {
-        title: "Speed & Quality",
-        desc: "Streamlined processes for faster results without compromise.",
-        icon: <Zap className="w-6 h-6 text-white" />,
-        gradient: "from-emerald-500 to-emerald-600"
-      },
-      {
-        title: "Global Network",
-        desc: "Access talent from USA, India, and Latin America.",
-        icon: <Globe className="w-6 h-6 text-white" />,
-        gradient: "from-purple-500 to-purple-600"
-      },
-      {
-        title: "Industry Focus",
-        desc: "Expertise across IT, engineering, healthcare, finance, and more.",
-        icon: <Target className="w-6 h-6 text-white" />,
-        gradient: "from-orange-500 to-orange-600"
-      }
-    ].map((card, index) => (
-      <div
-        key={index}
-        className="bg-white rounded-2xl p-8 h-64 flex flex-col justify-between border border-gray-100 shadow-lg 
+            {/* Right Side - Cards */}
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  {
+                    title: "Compliance First",
+                    desc: "Full adherence to labor, immigration, and employment regulations.",
+                    icon: <Shield className="w-6 h-6 text-white" />,
+                    gradient: "from-blue-500 to-blue-600"
+                  },
+                  {
+                    title: "Speed & Quality",
+                    desc: "Streamlined processes for faster results without compromise.",
+                    icon: <Zap className="w-6 h-6 text-white" />,
+                    gradient: "from-emerald-500 to-emerald-600"
+                  },
+                  {
+                    title: "Global Network",
+                    desc: "Access talent from USA, India, and Latin America.",
+                    icon: <Globe className="w-6 h-6 text-white" />,
+                    gradient: "from-purple-500 to-purple-600"
+                  },
+                  {
+                    title: "Industry Focus",
+                    desc: "Expertise across IT, engineering, healthcare, finance, and more.",
+                    icon: <Target className="w-6 h-6 text-white" />,
+                    gradient: "from-orange-500 to-orange-600"
+                  }
+                ].map((card, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-2xl p-8 h-64 flex flex-col justify-between border border-gray-100 shadow-lg 
                    transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl 
                    hover:border-transparent hover:bg-gradient-to-br hover:from-white hover:to-gray-50
                    relative overflow-hidden group"
-      >
-        {/* Hover gradient ring effect */}
-        <div
-          className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500
+                  >
+                    {/* Hover gradient ring effect */}
+                    <div
+                      className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500
                       bg-gradient-to-br ${card.gradient} blur-[60px]`}
-        ></div>
+                    ></div>
 
-        <div className="relative z-10">
-          <div
-            className={`w-12 h-12 bg-gradient-to-br ${card.gradient} rounded-xl flex items-center justify-center mb-6 shadow-md`}
-          >
-            {card.icon}
-          </div>
-          <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors duration-300">
-            {card.title}
-          </h4>
-          <p className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-            {card.desc}
-          </p>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
+                    <div className="relative z-10">
+                      <div
+                        className={`w-12 h-12 bg-gradient-to-br ${card.gradient} rounded-xl flex items-center justify-center mb-6 shadow-md`}
+                      >
+                        {card.icon}
+                      </div>
+                      <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors duration-300">
+                        {card.title}
+                      </h4>
+                      <p className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                        {card.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
 
           </div>
@@ -425,15 +425,15 @@ const Index = () => {
                 className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-gray-200 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity duration-500 from-blue-500 to-purple-600"></div>
-                
+
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${value.gradient} rounded-xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                   {value.icon}
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">
                   {value.title}
                 </h3>
-                
+
                 <p className="text-gray-600 leading-relaxed">
                   {value.description}
                 </p>

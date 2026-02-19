@@ -75,7 +75,7 @@ const PrivacyPolicy = () => {
                 </h1>
 
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  At AlliedCodeSolutions, we are committed to protecting your privacy and ensuring the security of your personal information. This policy outlines how we collect, use, and safeguard your data.
+                  At Syntrionix Technologies, we are committed to protecting your privacy and ensuring the security of your personal information. This policy outlines how we collect, use, and safeguard your data.
                 </p>
 
                 <div className="pt-4">
@@ -89,7 +89,7 @@ const PrivacyPolicy = () => {
                   {/* Decorative Elements */}
                   <div className="absolute -top-4 -right-4 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
                   <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
-                  
+
                   {/* Main Card */}
                   <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:border-white/40 transition-all duration-300">
                     <h3 className="text-2xl font-bold text-white mb-6">Our Commitments</h3>

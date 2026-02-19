@@ -10,6 +10,7 @@ const Navigation = () => {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
+    { name: "Resume Builder", href: "/resume-builder" },
     { name: "About Us", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -19,18 +20,18 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 py-2">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-              <img
-                src="/logo.png"
-                alt="Allied Code Solutions"
-                className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-              />
+            <img
+              src="/logo.png"
+              alt="Syntrionix Technologies"
+              className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
 
-              <span className="font-poppins font-bold text-xl text-gray-900 whitespace-nowrap">
-                {/* Allied Code Solutions */}
-              </span>
+            <span className="font-poppins font-bold text-xl text-gray-900 whitespace-nowrap">
+              {/* Syntrionix Technologies */}
+            </span>
           </Link>
 
 
@@ -44,11 +45,10 @@ const Navigation = () => {
                   setIsMenuOpen(false);
                   window.scrollTo(0, 0);
                 }}
-                className={`font-medium text-sm transition-colors duration-200 ${
-                  isActive(item.href)
-                    ? "text-blue-600 border-b-2 border-blue-600 pb-1"
-                    : "text-gray-600 hover:text-blue-600"
-                }`}
+                className={`font-medium text-sm transition-colors duration-200 ${isActive(item.href)
+                  ? "text-blue-600 border-b-2 border-blue-600 pb-1"
+                  : "text-gray-600 hover:text-blue-600"
+                  }`}
               >
                 {item.name}
               </Link>
@@ -78,11 +78,10 @@ const Navigation = () => {
                 key={item.name}
                 to={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`block font-medium text-sm py-2 rounded-md px-2 transition duration-200 ${
-                  isActive(item.href)
-                    ? "text-blue-600 bg-blue-50"
-                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                }`}
+                className={`block font-medium text-sm py-2 rounded-md px-2 transition duration-200 ${isActive(item.href)
+                  ? "text-blue-600 bg-blue-50"
+                  : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
               >
                 {item.name}
               </Link>
