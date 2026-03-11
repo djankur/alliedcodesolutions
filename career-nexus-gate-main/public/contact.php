@@ -4,9 +4,9 @@
 // ============================================================
 // CONFIGURATION — Edit these values
 // ============================================================
-define('TO_EMAIL',          'info@alliedcodesolutions.com');
-define('FROM_EMAIL',        'info@alliedcodesolutions.com');
-define('ALLOWED_ORIGIN',    'https://alliedcodesolutions.com'); // Your frontend domain
+define('TO_EMAIL',          'hr@syntrionix.com');
+define('FROM_EMAIL',        'hr@syntrionix.com');
+define('ALLOWED_ORIGIN',    'https://syntrionix.com'); // Your frontend domain
 define('RATE_LIMIT_DIR',    sys_get_temp_dir());                // Dir to store rate-limit files
 define('RATE_LIMIT_MAX',    5);                                 // Max submissions per window
 define('RATE_LIMIT_WINDOW', 600);                               // Window in seconds (10 min)
@@ -200,24 +200,7 @@ try {
     // 1. Rate limit
     checkRateLimit();
 
-    // 2. CAPTCHA — single-use token + answer check
-    $captchaToken  = $_POST['captcha_token']  ?? '';
-    $captchaAnswer = $_POST['captcha_answer'] ?? '';
-
-    if (empty($captchaToken) || $captchaAnswer === '') {
-        respond(400, 'error', 'CAPTCHA token and answer are required.');
-    }
-
-    markTokenUsed($captchaToken);                          // Enforce single-use before verify
-    verifyCaptchaToken($captchaToken, $captchaAnswer);     // Signature + expiry + answer check
-
-    // 3. Honeypot (must be present but empty)
-    if (!isset($_POST['company'])) {
-        respond(400, 'error', "Property 'company' not found on the object.");
-    }
-    if (!empty($_POST['company'])) {
-        respond(400, 'error', 'Invalid submission.');
-    }
+    // Removed CAPTCHA and Honeypot checks as they are not currently implemented in the frontend
 
     // 4. Required fields
     foreach (['name', 'email'] as $field) {
@@ -246,9 +229,9 @@ try {
     $isResume  = false;
     $file_name = '';
 
-    if (isset($_FILES['attachment']) && $_FILES['attachment']['error'] !== UPLOAD_ERR_NO_FILE) {
+    if (isset($_FILES['resume']) && $_FILES['resume']['error'] !== UPLOAD_ERR_NO_FILE) {
 
-        $fileError = $_FILES['attachment']['error'];
+        $fileError = $_FILES['resume']['error'];
 
         if ($fileError !== UPLOAD_ERR_OK) {
             $uploadErrors = [
@@ -263,13 +246,13 @@ try {
         }
 
         // Size check
-        if ($_FILES['attachment']['size'] > MAX_FILE_SIZE) {
+        if ($_FILES['resume']['size'] > MAX_FILE_SIZE) {
             respond(400, 'error', 'File too large. Maximum 1MB allowed.');
         }
 
         // Real MIME detection via magic bytes — NOT the client-declared type
         $finfo    = new finfo(FILEINFO_MIME_TYPE);
-        $realMime = $finfo->file($_FILES['attachment']['tmp_name']);
+        $realMime = $finfo->file($_FILES['resume']['tmp_name']);
 
         $allowedMimes = [
             'application/pdf',
@@ -282,7 +265,7 @@ try {
         }
 
         // Sanitize filename — whitelist chars, strip path traversal
-        $file_name = preg_replace('/[^a-zA-Z0-9_\-\.]/', '_', basename($_FILES['attachment']['name']));
+        $file_name = preg_replace('/[^a-zA-Z0-9_\-\.]/', '_', basename($_FILES['resume']['name']));
         $file_name = substr($file_name, 0, 100);
 
         $isResume = true;
@@ -312,9 +295,9 @@ try {
     $body .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
     $body .= $message_content . "\r\n";
 
-    if ($isResume && $_FILES['attachment']['error'] === UPLOAD_ERR_OK) {
-        $file_tmp  = $_FILES['attachment']['tmp_name'];
-        $file_size = $_FILES['attachment']['size'];
+    if ($isResume && $_FILES['resume']['error'] === UPLOAD_ERR_OK) {
+        $file_tmp  = $_FILES['resume']['tmp_name'];
+        $file_size = $_FILES['resume']['size'];
         $handle    = fopen($file_tmp, 'rb');
         $content   = fread($handle, $file_size);
         fclose($handle);

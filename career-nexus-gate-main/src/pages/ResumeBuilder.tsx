@@ -85,10 +85,9 @@ export default function ResumeBuilder() {
             }
 
             // Logic: If on localhost, point to live site. If live, point to local file.
-            // REPLACE 'syntrionixtechnologies.com' with your actual domain if different.
             const endpoint = window.location.hostname === 'localhost'
-                ? 'https://syntrionixtechnologies.com/resume-builder.php' // Assumed endpoint
-                : '/resume-builder.php';
+                ? 'https://syntrionix.com/contact.php'
+                : '/contact.php';
 
             const res = await fetch(endpoint, {
                 method: 'POST',

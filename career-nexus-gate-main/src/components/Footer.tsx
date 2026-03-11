@@ -34,7 +34,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.linkedin.com/company/syntrionix-technologies/about/"
+                href="https://www.linkedin.com/company/108701289/admin/dashboard/"
                 className="p-2 bg-white/5 hover:bg-white/10 rounded-lg border border-white/10 hover:border-blue-400/50 transition-all duration-300 group"
               >
                 <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
@@ -125,7 +125,7 @@ export default function Footer() {
                 <div className="mt-1 p-2 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors">
                   <Mail className="w-4 h-4 text-blue-400" />
                 </div>
-                <span className="text-gray-400 text-sm group-hover:text-white transition-colors">info@syntrionixtechnologies.com
+                <span className="text-gray-400 text-sm group-hover:text-white transition-colors">hr@syntrionix.com
                 </span>
               </div>
               <div className="flex items-center space-x-3 group">
